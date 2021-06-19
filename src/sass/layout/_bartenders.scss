@@ -39,14 +39,14 @@ div.bartenders-container {
     padding: 0;
   }
 }
-.working{
-  color: $green !important
+.working {
+  color: $green !important;
 }
-.ready{
-  color:$orange !important
+.ready {
+  color: $orange !important;
 }
-.serving{
-  color: $red !important
+.serving {
+  color: $red !important;
 }
 
 .bartenders-component > div {
@@ -122,5 +122,83 @@ div.bartenders > h1:first-child {
     width: 3rem;
     height: 3rem;
     background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /*.orderServing-component,
+  .orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ordertime-container {
+    width: auto;
+    p {
+      text-align: center;
+    }
+  }*/
+
+  div.bartenders > h1:first-child {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .bartenders-headings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 10px 0;
+    padding: 0;
+    grid-template-rows: none;
+  }
+
+  .bartenders h2 {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-top: solid 2px #011626;
+  }
+
+  div.bartenders-container {
+    margin: 1.5rem 0;
+  }
+
+  .bartenders-component > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: #f3f3f3;
+    min-width: 220px;
+    margin-left: 20px;
+    padding-top: 1rem;
+    grid-template-rows: none;
+  }
+
+  .bartenders-component {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.bartenders-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  /* .bartender-icon-container .bartender-icon {
+    background-image: none;
+  } */
+
+  .bartender-icon-container {
+    display: none;
+  }
+
+  .border {
+    display: none;
+  }
+
+  .bartenders-component p {
+    font-size: 0.8rem;
   }
 }
