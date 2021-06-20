@@ -241,3 +241,61 @@ div.tapsstatus-content:first-child {
 .storagestatus tr.highstock .amount-circle {
   background-color: $green;
 }
+
+@media only screen and (max-width: 500px) {
+  .inventory-container h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  table {
+    margin-top: 1rem;
+  }
+
+  .inventory-container {
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .tapssituation {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .inventory-container th {
+    margin: 0;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    //display: grid;
+  }
+  /*   .tapstatus-heading tr {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  } */
+
+  .tapstatus-heading tr {
+    padding: 0;
+    //justify-content: space-around;
+  }
+
+  .tapsstatus-content td {
+    padding: 0.5rem 0.6rem;
+    text-align: center;
+    font-size: 0.75rem;
+    .capacity {
+      height: 0.8rem;
+      width: 3rem;
+    }
+  }
+
+  .storagesituation {
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  /*   .storagestatus {
+    align-items: center;
+  } */
+}
