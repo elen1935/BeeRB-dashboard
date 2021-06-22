@@ -298,4 +298,62 @@ div.tapsstatus-content:first-child {
   /*   .storagestatus {
     align-items: center;
   } */
+
+  .storagestatus-heading {
+    display: flex;
+    justify-content: space-around;
+    //padding: 0 5rem;
+    //min-width: 210px;
+  }
+
+  .storagestatus-heading th {
+    padding: 0.3rem 1.5rem;
+  }
+
+  /*   .storagestatus {
+    display: flex;
+    align-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  } */
+
+  .storagesituation {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /*  .storagestatus-content td {
+    justify-content: center;
+  } */
+
+  .amount-circle td {
+    justify-content: center;
+    //align-content: flex-end;
+  }
+
+  .amount-circle {
+    margin-left: 0;
+    margin-right: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    justify-self: flex-start;
+  }
+
+  .storagestatus-content {
+    padding: 0.3rem 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .inventory-container td {
+    font-size: 0.75rem;
+  }
+
+  .storagestatus-content td:first-child {
+    justify-self: flex-start;
+  }
 }
