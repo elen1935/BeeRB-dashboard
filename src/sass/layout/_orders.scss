@@ -110,19 +110,24 @@
   }
 
   .ordertime-container {
-    min-width: 210px;
+    //min-width: 210px;
     //width: auto;
     //min-width: none;
-    //padding: 0.4rem 0.5rem 0.5rem 0.2rem;
+
     //margin: 0 3rem;
     //align-items: stretch;
     //align-self: center;
     //text-align: center;
     //position: relative;
     //align-content: flex-end;
+    //display: block;
 
     p {
       text-align: center;
+      font-size: 0.7rem;
+      //padding: 0 3rem;
+      padding: 0.5rem 0;
+      margin: 0 6rem;
     }
   }
 
@@ -138,4 +143,30 @@
   .orders-queue h1:first-child {
     text-align: center;
   }
+
+  .serving-component li,
+  .queue-component li {
+    font-size: 0.75rem;
+  }
+
+  .heading-container h1 {
+    font-size: 0.9rem;
+  }
+
+  .serving-component {
+    min-height: 175px;
+    //min-height: 0;
+  }
+
+  .queue-component {
+    min-height: 140px;
+    //min-height: 0;
+  }
+
+  /*  .listOrder li:last-child {
+    margin-bottom: 1rem;
+  } */
+  /* .ordertime-container {
+    padding-top: 2rem;
+  } */
 }
