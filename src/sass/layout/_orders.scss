@@ -22,6 +22,7 @@
     font-family: "Dela-Gothic-One-Regular", sans-serif;
     font-size: 1rem;
     margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
   }
 
@@ -62,10 +63,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* .serving-component {
-  position: relative;
-} */
-
 .ordertime-container {
   min-width: 210px;
   display: flex;
@@ -73,6 +70,7 @@
   bottom: 0px;
   background-color: $light-grey;
   padding: 0rem;
+  max-width: 230px;
 
   p {
     padding: 0 0.5rem;
@@ -91,82 +89,59 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .heading-container h1 {
+    font-size: 0.9rem;
+  }
+
   .orderServing-component,
   .orders-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    //justify-content: flex-start;
   }
 
-  .orders-serving > h1 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+  .serving-component {
+    min-height: 180px;
+    li {
+      font-size: 0.75rem;
+    }
   }
 
-  .orders-queue > h1 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
-
-  .ordertime-container {
-    //min-width: 210px;
-    //width: auto;
-    //min-width: none;
-
-    //margin: 0 3rem;
-    //align-items: stretch;
-    //align-self: center;
-    //text-align: center;
-    //position: relative;
-    //align-content: flex-end;
-    //display: block;
-
-    p {
-      text-align: center;
-      font-size: 0.7rem;
-      //padding: 0 3rem;
-      padding: 0.5rem 0;
-      margin: 0 6rem;
+  .queue-component {
+    min-height: 140px;
+    li {
+      font-size: 0.75rem;
     }
   }
 
   .orders-serving {
     padding: 0;
     border-top: none;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    h1:first-child {
+      text-align: center;
+    }
   }
 
-  .orders-serving h1:first-child {
-    text-align: center;
+  .orders-queue {
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    h1:first-child {
+      text-align: center;
+    }
   }
 
-  .orders-queue h1:first-child {
-    text-align: center;
+  .ordertime-container {
+    p {
+      text-align: center;
+      font-size: 0.7rem;
+      padding: 0.5rem 0;
+      margin: 0 6rem;
+    }
   }
-
-  .serving-component li,
-  .queue-component li {
-    font-size: 0.75rem;
-  }
-
-  .heading-container h1 {
-    font-size: 0.9rem;
-  }
-
-  .serving-component {
-    min-height: 180px;
-    //min-height: 0;
-  }
-
-  .queue-component {
-    min-height: 140px;
-    //min-height: 0;
-  }
-
-  /*  .listOrder li:last-child {
-    margin-bottom: 1rem;
-  } */
-  /* .ordertime-container {
-    padding-top: 2rem;
-  } */
 }
