@@ -1,17 +1,7 @@
 @use "../base/vars" as *;
 
-/* .inventory-container {
-  padding: 0.2rem 0rem;
-  margin: 1.5rem;
-  border-top: solid 2px #011626;
-}
- */
-
 .inventory-container {
   display: flex;
-  //justify-content: space-between;
-  //padding: 0.2rem 0rem;
-  //padding-left: 1rem;
   margin: 1.5rem;
   border-top: solid 2px #011626;
 
@@ -25,11 +15,15 @@
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 0rem 2rem;
   }
 
   td {
     font-family: "Courier-Prime-Regular";
     font-size: 0.9rem;
+    display: flex;
+    padding: 0.5rem 0;
+    align-self: center;
   }
 }
 
@@ -38,94 +32,37 @@ div.tapsstatus-content:first-child {
   padding: 0;
 }
 
-/* .tablecontent:first-child {
-  padding-right: 4rem;
-} */
-
-.inventory-container th {
-  padding: 0rem 2rem;
-  //padding: 15px;
-  //text-align: center;
-}
-
-.inventory-container td {
-  display: flex;
-  /*   flex-direction: row;
-  justify-content: flex-end; */
-  //padding: 0.3rem 1.5rem;
-  padding: 0.5rem 0;
-  //text-align: left;
-  //background-color: $light-grey;
-  //margin-bottom: 0.5rem;
-  align-self: center;
-}
-
 .tapssituation {
   border-right: solid 2px #011626;
   padding-right: 1.5rem;
 }
 
-.storagesituation {
-  padding-left: 1.5rem;
-}
-
-.tapssituation {
-  .tapstatus-heading {
-    border-top: solid 2px #011626;
-    border-bottom: solid 2px #011626;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* .tapstatus-heading {
-  display: flex;
-  justify-content: space-around;
-  padding: 0.3rem 4rem;
-  th {
-    text-align: center;
-  }
-} */
-
 .tapstatus-heading {
+  border-top: solid 2px #011626;
+  border-bottom: solid 2px #011626;
+  margin-bottom: 0.5rem;
   justify-content: center;
   tr {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0.2rem 6rem; */
-    //padding: 0.3rem 4rem;
     display: flex;
     justify-content: space-around;
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  /*   thead {
-    justify-content: center;
-  } */
 }
 
-/* .tapsstatus-content {
-  
-} */
-
-/* .tapstatus-heading > th {
-  justify-self: stretch;
-}
- */
 .tapsstatus-content {
   background-color: $light-grey;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
   margin-bottom: 0.5rem;
-  //margin-left: 1rem;
   td {
     justify-content: center;
   }
 }
 
-/* div.tapsstatus-content:first-child {
-  padding-left: 0.5rem;
+.storagesituation {
+  padding-left: 1.5rem;
 }
-*/
 
 .storagestatus-content {
   background-color: $light-grey;
@@ -142,9 +79,6 @@ div.tapsstatus-content:first-child {
   border: solid 2px #011626;
   width: 1.8rem;
   height: 1.8rem;
-  //background-color: red;
-  /*  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%; */
   z-index: 100;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -159,44 +93,13 @@ div.tapsstatus-content:first-child {
     border-top: solid 2px #011626;
     border-bottom: solid 2px #011626;
     margin-bottom: 0.5rem;
+    tr {
+      padding-left: 2rem;
+    }
   }
 }
 
-.storagestatus-heading > tr {
-  /*   display: flex;
-  justify-content: space-around; */
-  padding-left: 2rem;
-  //padding-right: 2rem;
-}
-
-/* .inventory-container > div {
-  padding: 1rem;
-  margin: 1rem auto;
-  display: grid;
-  //background-color: lightcyan;
-}
-
-.inventory-container > div table {
-  margin: 1rem auto;
-  justify-content: center;
-}
-*/
-
-/* .tablecontent {
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-} */
-
-/* .tapsstatus-content > td{
-  .capacity {
-
-  }
-}
- */
 .capacity {
-  /* height: 20px;
-  width: 100px; */
   height: 1.8rem;
   width: 9rem;
   border: solid 2px black;
@@ -243,12 +146,6 @@ div.tapsstatus-content:first-child {
 }
 
 @media only screen and (max-width: 500px) {
-  .inventory-container h1 {
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 0;
-  }
-
   table {
     margin-top: 1rem;
   }
@@ -256,6 +153,22 @@ div.tapsstatus-content:first-child {
   .inventory-container {
     flex-direction: column;
     border-top: none;
+    h1 {
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    th {
+      margin: 0;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.5rem;
+      text-align: center;
+    }
+
+    td {
+      font-size: 0.75rem;
+    }
   }
 
   .tapssituation {
@@ -263,21 +176,8 @@ div.tapsstatus-content:first-child {
     padding-right: 0;
   }
 
-  .inventory-container th {
-    margin: 0;
-    font-size: 0.75rem;
-    padding: 0.3rem 0.5rem;
-    text-align: center;
-    //display: grid;
-  }
-  /*   .tapstatus-heading tr {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-  } */
-
   .tapstatus-heading tr {
     padding: 0;
-    //justify-content: space-around;
   }
 
   .tapsstatus-content td {
@@ -291,54 +191,20 @@ div.tapsstatus-content:first-child {
   }
 
   .storagesituation {
-    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 1.5rem;
+    padding-left: 0;
   }
-
-  /*   .storagestatus {
-    align-items: center;
-  } */
 
   .storagestatus-heading {
     display: flex;
     justify-content: space-around;
-    //padding: 0 5rem;
-    //min-width: 210px;
-  }
-
-  .storagestatus-heading th {
-    padding: 0.3rem 1.5rem;
-  }
-
-  /*   .storagestatus {
-    display: flex;
-    align-content: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  } */
-
-  .storagesituation {
-    display: flex;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  /*  .storagestatus-content td {
-    justify-content: center;
-  } */
-
-  .amount-circle td {
-    justify-content: center;
-    //align-content: flex-end;
-  }
-
-  .amount-circle {
-    margin-left: 0;
-    margin-right: 0;
-    width: 1.6rem;
-    height: 1.6rem;
-    justify-self: flex-start;
+    th {
+      padding: 0.3rem 1.5rem;
+    }
   }
 
   .storagestatus-content {
@@ -349,11 +215,18 @@ div.tapsstatus-content:first-child {
     justify-items: center;
   }
 
-  .inventory-container td {
-    font-size: 0.75rem;
-  }
-
   .storagestatus-content td:first-child {
     justify-self: flex-start;
+  }
+
+  .amount-circle {
+    margin-left: 0;
+    margin-right: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    justify-self: flex-start;
+    td {
+      justify-content: center;
+    }
   }
 }
