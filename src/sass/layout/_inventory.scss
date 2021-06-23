@@ -15,7 +15,7 @@
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0rem 2rem;
+    padding: 0rem 2.5rem;
   }
 
   td {
@@ -23,13 +23,15 @@
     font-size: 0.9rem;
     display: flex;
     padding: 0.5rem 0;
+    //padding: 0.5rem 0.8rem;
     align-self: center;
   }
 }
 
 div.tapsstatus-content:first-child {
   align-self: flex-start;
-  padding: 0;
+  //padding: 0;
+  padding: 0 0.8rem;
 }
 
 .tapssituation {
@@ -45,18 +47,21 @@ div.tapsstatus-content:first-child {
   tr {
     display: flex;
     justify-content: space-around;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0 0.8rem;
+    //padding-left: 2rem;
+    //padding-right: 2rem;
   }
 }
 
 .tapsstatus-content {
   background-color: $light-grey;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  //grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 0.5rem;
   td {
     justify-content: center;
+    text-align: center;
   }
 }
 
@@ -163,6 +168,7 @@ div.tapsstatus-content:first-child {
       margin: 0;
       font-size: 0.75rem;
       padding: 0.3rem 0.5rem;
+      //padding: 0.3rem 1rem;
       text-align: center;
     }
 
@@ -178,10 +184,12 @@ div.tapsstatus-content:first-child {
 
   .tapstatus-heading tr {
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .tapsstatus-content td {
-    padding: 0.5rem 0.6rem;
+    //padding: 0.5rem 0.4rem;
     text-align: center;
     font-size: 0.75rem;
     .capacity {
@@ -228,5 +236,9 @@ div.tapsstatus-content:first-child {
     td {
       justify-content: center;
     }
+  }
+
+  div.tapsstatus-content:first-child {
+    padding: 0 0.5rem;
   }
 }

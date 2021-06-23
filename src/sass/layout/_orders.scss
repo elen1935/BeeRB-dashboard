@@ -88,10 +88,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .heading-container h1 {
-    font-size: 0.9rem;
-  }
-
   .orderServing-component,
   .orders-container {
     display: flex;
@@ -105,12 +101,18 @@
     li {
       font-size: 0.75rem;
     }
+    .heading-container h1 {
+      font-size: 0.8rem;
+    }
   }
 
   .queue-component {
     min-height: 140px;
     li {
       font-size: 0.75rem;
+    }
+    .heading-container h1 {
+      font-size: 0.8rem;
     }
   }
 
